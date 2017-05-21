@@ -1,0 +1,31 @@
+extends ./index.pug
+
+append styles
+    link(rel='stylesheet', href='/stylesheets/login.css')
+
+block body
+    .container
+        form.form-register
+            h2.form-register-heading Please register
+            .form-group.row
+                label.col-2.col-form-label(for='form-register-name') Name
+                .col-10
+                    input#form-register-name.form-control(type='text', value='')
+            .form-group.row
+                label.col-2.col-form-label(for='form-register-email') Email
+                .col-10
+                    input#form-register-email.form-control(type='email', value='')
+            .form-group.row
+                label.col-2.col-form-label(for='form-register-username') Username
+                .col-10
+                    input#form-register-username.form-control(type='text', value='')
+            .form-group.row
+                label.col-2.col-form-label(for='form-register-password') Password
+                .col-10
+                    input#form-register-password.form-control(type='password', value='')
+            form-group.row
+                label.col-2.col-form-label(for='form-register-confirmPassword') Confirm Password
+                .col-10
+                    input#form-register-confirmPassword.form-control(type='password', value='')
+            button.btn.btn-primary(type='submit') Submit
+

@@ -1,0 +1,22 @@
+extends ./index.pug
+
+append styles
+    link(rel='stylesheet', href='/stylesheets/login.css')
+
+block body
+    .container
+        form.form-signin
+            h2.form-signin-heading Please sign in
+            .form-group.row
+                label.col-2.col-form-label(for='form-login-username') Username
+                .col-10
+                    input#form-login-username.form-control(type='text', value='')
+            .form-group.row
+                label.col-2.col-form-label(for='form-login-password') Password
+                .col-10
+                    input#form-login-password.form-control(type='password', value='')
+            .checkbox
+                label
+                    input(type='checkbox', value='remember-me')
+                    |  Remember me
+            button.btn.btn-primary(type='submit') Login

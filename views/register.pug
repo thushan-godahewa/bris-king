@@ -5,27 +5,30 @@ append styles
 
 block body
     .container
-        form.form-register
+        form.form-register(method='post', action='/users/register')
             h2.form-register-heading Please register
+            if errors
+                each error, i in errors
+                    div.alert.alert-danger #{error.msg}
             .form-group.row
                 label.col-2.col-form-label(for='form-register-name') Name
                 .col-10
-                    input#form-register-name.form-control(type='text', value='')
+                    input#form-register-name.form-control(type='text', name='formRegisterName', value='')
             .form-group.row
                 label.col-2.col-form-label(for='form-register-email') Email
                 .col-10
-                    input#form-register-email.form-control(type='email', value='')
+                    input#form-register-email.form-control(type='email', name='formRegisterEmail', value='')
             .form-group.row
                 label.col-2.col-form-label(for='form-register-username') Username
                 .col-10
-                    input#form-register-username.form-control(type='text', value='')
+                    input#form-register-username.form-control(type='text', name='formRegisterUsername', value='')
             .form-group.row
                 label.col-2.col-form-label(for='form-register-password') Password
                 .col-10
-                    input#form-register-password.form-control(type='password', value='')
+                    input#form-register-password.form-control(type='password', name='formRegisterPassword', value='')
             form-group.row
                 label.col-2.col-form-label(for='form-register-confirmPassword') Confirm Password
                 .col-10
-                    input#form-register-confirmPassword.form-control(type='password', value='')
-            button.btn.btn-primary(type='submit') Submit
+                    input#form-register-confirmPassword.form-control(type='password', name='formRegisterConfirmPassword', value='')
+            button.btn.btn-primary(type='submit', name='submit') Register
 

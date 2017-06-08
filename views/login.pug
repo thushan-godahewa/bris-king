@@ -5,16 +5,16 @@ append styles
 
 block body
     .container
-        form.form-signin
-            h2.form-signin-heading Please sign in
+        form.form-login(method='post', action='/users/login')
+            h2.form-login-heading Please sign in
             .form-group.row
                 label.col-2.col-form-label(for='form-login-username') Username
                 .col-10
-                    input#form-login-username.form-control(type='text', value='')
+                    input#form-login-username.form-control(type='text', name='username', value='')
             .form-group.row
                 label.col-2.col-form-label(for='form-login-password') Password
                 .col-10
-                    input#form-login-password.form-control(type='password', value='')
+                    input#form-login-password.form-control(type='password', name='password', value='')
             .checkbox
                 label
                     input(type='checkbox', value='remember-me')

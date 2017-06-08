@@ -12,7 +12,7 @@ var flash = require('connect-flash');
 var bcrypt = require('bcryptjs');
 var mongodb = require('mongodb');
 var mongoose = require('mongoose');
-var mongooseDb = mongoose.connection;
+var db = mongoose.connection;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
